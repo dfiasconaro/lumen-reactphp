@@ -27,9 +27,8 @@ class ReactServe extends Command {
 	 */
 	public function fire()
 	{
-		$host = $this->input->getOption('host');
-
-		$port = $this->input->getOption('port');
+		$host = "0.0.0.0";
+		$port = getenv("PORT");
 
 		$this->info("Lumen ReactPHP server started on http://{$host}:{$port}");
 
